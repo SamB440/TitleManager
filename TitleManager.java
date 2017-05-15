@@ -1,4 +1,4 @@
-package com.SamB440.Kingdoms;
+package com.SamB440.Kingdoms
 
 import net.minecraft.server.v1_12_R1.IChatBaseComponent;
 import net.minecraft.server.v1_12_R1.Packet;
