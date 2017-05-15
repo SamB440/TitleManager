@@ -1,11 +1,11 @@
 package com.SamB440.Kingdoms;
 
-import net.minecraft.server.v1_11_R1.IChatBaseComponent;
-import net.minecraft.server.v1_11_R1.Packet;
-import net.minecraft.server.v1_11_R1.PacketPlayOutChat;
-import net.minecraft.server.v1_11_R1.PacketPlayOutTitle;
+import net.minecraft.server.v1_12_R1.IChatBaseComponent;
+import net.minecraft.server.v1_12_R1.Packet;
+import net.minecraft.server.v1_12_R1.PacketPlayOutChat;
+import net.minecraft.server.v1_12_R1.PacketPlayOutTitle;
 
-import org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class TitleManager {
@@ -29,7 +29,7 @@ public class TitleManager {
     @SuppressWarnings("rawtypes")
 	public static void sendActionBar(Player player, String message) {
         IChatBaseComponent cbc = IChatBaseComponent.ChatSerializer.a((String)("{\"text\": \"" + message + "\"}"));
-        PacketPlayOutChat ppoc = new PacketPlayOutChat(cbc, (byte) 2);
+        PacketPlayOutChat ppoc = new PacketPlayOutChat(cbc);
         ((CraftPlayer)player).getHandle().playerConnection.sendPacket((Packet)ppoc);
     }
 }
